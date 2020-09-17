@@ -1,0 +1,58 @@
+//Hannah Neymeyer
+//Dr. Litman
+//CSC 250
+//9/16/2020
+
+import java.util.*;
+ public class bintohex
+ {
+	 public static void main(String[] args)
+      {
+         Scanner sc=new Scanner(System.in);
+         System.out.println("enter the binary number");
+         double s=sc.nextDouble();
+         int c=0;
+         long s1=0;
+         String z="";
+         while(s>0)
+         {
+           s1=s1+(long)(Math.pow(2,c)*(long)(s%10));
+           s=(long)s/10;
+           c++;
+         }
+         while(s1>0)
+         {
+           long j=s1%16;
+           if(j==10)
+           {
+              z="A"+z;
+           }
+           else if(j==11)
+           {
+              z="B"+z;
+           }
+           else if(j==12)
+           {
+              z="C"+z;
+           }
+           else if(j==13)
+           {
+              z="D"+z;
+           }
+           else if(j==14)
+           {
+              z="E"+z;
+           }
+           else if(j==15)
+           {
+              z="F"+z;
+           }
+           else
+           {
+              z=j+z;
+           }
+           s1=s1/16;
+      }
+    System.out.println("The Binary number converted to Hexadecimal number is : "+z);
+   }
+ }
