@@ -1,0 +1,56 @@
+//Hannah Neymeyer
+//Dr. Litman
+//CSC 250
+//9/20/20
+
+public class BibleBook 
+{ 
+    // Our Variables for the books
+    String name; 
+    int chapters; 
+    String summary; 
+  
+    // Class 
+    public BibleBook(String name, int chapters, String summary) 
+    { 
+        this.name = name; 
+        this.chapters = chapters; 
+        this.summary = summary; 
+    } 
+  
+    // Defining name of book
+    public String getName() 
+    { 
+        return name; 
+    } 
+  
+    // Defining number of books
+    public int getChapters() 
+    { 
+        return chapters; 
+    } 
+  
+    // Defining summary of book
+    public String Summary() 
+    { 
+        return summary ; 
+    } 
+  
+
+    public String toString() 
+    { 
+        return("Here:"+ this.getName()+ "," + this.getChapters()+ ","+ this.Summary()); 
+    } 
+  
+    public static void main(String[] args) 
+    { 
+        BibleBook book1 = new BibleBook("Matthew", 28, "gospel of JC"); 
+        System.out.println(book1.toString()); 
+        
+        BibleBook book2 = new BibleBook("Luke", 26, "orgins of JC"); 
+        System.out.println(book2.toString()); 
+        
+        BibleBook book3 = new BibleBook("Mark", 16, "JC adult life"); 
+        System.out.println(book3.toString()); 
+    } 
+} 
